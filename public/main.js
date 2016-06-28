@@ -3,6 +3,7 @@ function getPhotos() {
         "type": "GET",
         "url": "/photos",
         "success": function(data) {
+            $("#photos").html('');
             for (var i in data) {
                 var elem = $("<img>");
                 elem.attr("src", "photos/" + data[i].filename);
@@ -32,3 +33,4 @@ function login() {
 }
 
 $("#loggedIn").hide();
+setInterval(getPhotos, 1000);

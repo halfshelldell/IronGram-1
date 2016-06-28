@@ -57,12 +57,18 @@ public class IronGramRestController {
                 photo.setLdt(LocalDateTime.now());
                 photos.save(photo);
             }
-            if (ldt.isAfter(photo.getLdt().plusSeconds(10))) {
+            if (ldt.isAfter(photo.getLdt().plusSeconds(photo.getViewSeconds()))) {
                 photos.delete(photo);
                 File newFile = new File("public/photos/" + photo.getFilename());
                 newFile.delete();
             }
         }
         return photos.findByRecipient(user);
+    }
+
+    @RequestMapping(path = "/public-photos", method = RequestMethod.GET)
+    public Iterable<Photo> publicPhotos(String username) {
+        User user = users.findFirstByName(username);
+        return photos.findBySenderAndIsPublic(user, true);
     }
 }

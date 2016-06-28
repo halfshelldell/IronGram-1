@@ -24,15 +24,19 @@ public class Photo {
 
     LocalDateTime ldt;
 
-    int viewSeconds;
+    long viewSeconds;
+
+    boolean isPublic;
 
     public Photo() {
     }
 
-    public Photo(User sender, User recipient, String filename) {
+    public Photo(User sender, User recipient, String filename, long viewSeconds, boolean isPublic) {
         this.sender = sender;
         this.recipient = recipient;
         this.filename = filename;
+        this.viewSeconds = viewSeconds;
+        this.isPublic = isPublic;
     }
 
     public int getId() {
@@ -73,5 +77,21 @@ public class Photo {
 
     public void setLdt(LocalDateTime ldt) {
         this.ldt = ldt;
+    }
+
+    public long getViewSeconds() {
+        return viewSeconds;
+    }
+
+    public void setViewSeconds(long viewSeconds) {
+        this.viewSeconds = viewSeconds;
+    }
+
+    public boolean isPublic() {
+        return isPublic;
+    }
+
+    public void setPublic(boolean aPublic) {
+        isPublic = aPublic;
     }
 }

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IronGram.iml" filepath="$PROJECT_DIR$/.idea/modules/IronGram.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IronGram_main.iml" filepath="$PROJECT_DIR$/.idea/modules/IronGram_main.iml" group="IronGram" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IronGram_test.iml" filepath="$PROJECT_DIR$/.idea/modules/IronGram_test.iml" group="IronGram" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IronGram-1.iml" filepath="$PROJECT_DIR$/.idea/modules/IronGram-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IronGram-1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/IronGram-1_main.iml" group="IronGram-1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IronGram-1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/IronGram-1_test.iml" group="IronGram-1" />
     </modules>
   </component>
 </project>

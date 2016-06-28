@@ -35,6 +35,7 @@ public class IronGramController {
 
     @RequestMapping(path = "/upload", method = RequestMethod.POST)
     public String upload(MultipartFile file, String receiver, HttpSession session) throws Exception {
+
         String username = (String) session.getAttribute("username");
         User sender = users.findFirstByName(username);
         User rec = users.findFirstByName(receiver);

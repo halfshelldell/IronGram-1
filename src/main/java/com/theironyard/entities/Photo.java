@@ -1,6 +1,7 @@
 package com.theironyard.entities;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 /**
  * Created by zach on 6/28/16.
@@ -20,6 +21,10 @@ public class Photo {
 
     @Column(nullable = false)
     String filename;
+
+    LocalDateTime ldt;
+
+    int viewSeconds;
 
     public Photo() {
     }
@@ -60,5 +65,13 @@ public class Photo {
 
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    public LocalDateTime getLdt() {
+        return ldt;
+    }
+
+    public void setLdt(LocalDateTime ldt) {
+        this.ldt = ldt;
     }
 }

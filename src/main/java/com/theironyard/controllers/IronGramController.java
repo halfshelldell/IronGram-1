@@ -34,7 +34,7 @@ public class IronGramController {
     }
 
     @RequestMapping(path = "/upload", method = RequestMethod.POST)
-    public String upload(MultipartFile file, String receiver, HttpSession session, int viewSeconds, boolean isPublic, MultipartFile p) throws Exception {
+    public String upload(MultipartFile file, String receiver, HttpSession session, int viewSeconds, boolean isPublic) throws Exception {
 
         String username = (String) session.getAttribute("username");
         User sender = users.findFirstByName(username);
@@ -44,7 +44,7 @@ public class IronGramController {
             throw new Exception("Can't find sender or receiver!");
         }
 
-        if (!p.getContentType().startsWith("image")) {
+        if (!file.getContentType().startsWith("image")) {
             throw new Exception("Only images are allowed.");
         }
 

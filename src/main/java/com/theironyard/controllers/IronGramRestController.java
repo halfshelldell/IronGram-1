@@ -71,4 +71,15 @@ public class IronGramRestController {
         User user = users.findFirstByName(username);
         return photos.findBySenderAndIsPublic(user, true);
     }
+
+    @RequestMapping(path = "/user", method = RequestMethod.GET)
+    public User getUser(HttpSession session) {
+        String username = (String) session.getAttribute("username");
+        if (username == null) {
+            return null;
+        }
+        else {
+            return users.findFirstByName(username);
+        }
+    }
 }

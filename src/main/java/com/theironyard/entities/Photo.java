@@ -24,14 +24,14 @@ public class Photo {
 
     LocalDateTime ldt;
 
-    long viewSeconds;
+    int viewSeconds;
 
     boolean isPublic;
 
     public Photo() {
     }
 
-    public Photo(User sender, User recipient, String filename, long viewSeconds, boolean isPublic) {
+    public Photo(User sender, User recipient, String filename, int viewSeconds, boolean isPublic) {
         this.sender = sender;
         this.recipient = recipient;
         this.filename = filename;
@@ -83,7 +83,7 @@ public class Photo {
         return viewSeconds;
     }
 
-    public void setViewSeconds(long viewSeconds) {
+    public void setViewSeconds(int viewSeconds) {
         this.viewSeconds = viewSeconds;
     }
 
